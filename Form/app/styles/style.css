@@ -1,0 +1,155 @@
+@font-face {
+	font-family: 'Cenotaph';
+	src: url('fonts/Cenotaph-Titling.woff') format('woff'),
+		url('fonts/Cenotaph-Titling.otf') format('opentype');
+}
+
+* {
+	/*font-family: 'Arial';*/
+	outline: none;
+	border: none;
+}
+
+body {
+	color: #EF8C98;
+	font-family: 'Cenotaph';
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+textarea {
+	resize: vertical; 
+	border-radius: 4px;
+	height: 150px;
+    width: 390px;
+    color: black;
+}
+
+input, textarea, select {
+	background-color: #F3E9EA !important;
+	padding: 4px;
+}
+
+.panel {
+	background-color: initial;
+}
+
+.panel-default>.panel-heading {
+	background-color: #F3E9EA;
+	color: #948080;
+}
+
+.progress {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    height: 12px;
+    background-color: #F3E9EA;
+}
+
+.progress-bar {
+	background-color: #EF8C98;
+}
+
+
+
+.part {
+	width: 420px;
+	background-color: #948080;
+	margin: 20px auto;
+	padding: 15px;
+	display: none;
+	border-radius: 4px;
+	position: relative;
+}
+
+.active-part {
+	display: block;
+}
+
+.part ul li {
+	position: relative;
+	padding: 10px 0;
+}
+
+.error {
+	display: block;
+	border: 2px solid #CA0808;
+	border-radius: 4px;
+	color: #CA0808;
+	background-color: #F3E9EA;
+	/*#DA8484;*/
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 100%;
+	padding: 2px 5px;
+	visibility: hidden;
+	/*width: 100%;*/
+	white-space: pre;
+}
+
+.error:after {
+	content: '';
+	display: block;
+	position: absolute;
+	border: 8px solid transparent;
+	border-right-color: #CA0808;
+    top: 4px;
+    left: -17px;
+}
+
+.addr1-error {
+	top: 24px;
+}
+
+.shown-error {
+	visibility: visible;
+}
+
+.btn-row>div {
+	text-align: center;
+}
+
+.upload {
+	width: 32px;
+	opacity: 0;
+	position: absolute;
+	z-index: 2;
+    overflow: hidden;
+}
+
+.upload-icon {
+	font-size: 32px;
+}
+
+.upload-icon:hover {
+	color: #F3E9EA;
+}
+
+.finish>div {
+	text-align: center;
+}
+
+.popup {
+	width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 42%;
+    background: white;
+    border-radius: 4px;
+    display: none;
+}
+
+.popup.shown {
+	display: block;
+}
+
+.popup .panel {
+	margin-bottom: 0;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Task</title>
+	<link rel="stylesheet" href="app/libraries/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" type="text/css" href="app/styles/style.css">
+</head>
+<body>
+	<div class="part first active-part" id="first-part">
+		<form novalidate="novalidate" class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-4 control-label" for="email">E-mail *</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="email" id="email" value="" name="email">
+					<span class="error" id="email-error"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-4 control-label" for="password">Password *</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="password" id="password" value="" name="password">
+					<span class="error" id="password-error"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-4 control-label" for="name">Name *</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text" id="name" value="" name="name">
+					<span class="error" id="name-error"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 col-sm-offset-3">
+					<label class="radio-inline"><input type="radio" name="gender" value="m" id="male" checked>Male</label>
+				</div>
+				<div class="col-sm-2 col-sm-offset-1">
+					<label class="radio-inline"><input type="radio" name="gender" value="f" id="female">Female</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 col-sm-offset-3">
+					<input class="btn" type="reset" id="first-part-reset">
+				</div>
+				<div class="col-sm-2 col-sm-offset-1">
+					<input class="btn" id="first-part-submit" type="submit" value="Next">
+				</div>
+			</div>
+		</form>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%" id="first-part-progress" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4">
+			</div>
+		</div>
+	</div>
+	<div class="part second" id="second-part">
+		<form novalidate="novalidate" class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-4 control-label" for="country">Country *</label>
+				<div class="col-sm-8">
+					<select id="country" class="form-control" name="country">
+						<option disabled>America</option>
+						<option selected="selected">USA</option>
+						<option>Canada</option>
+						<option>Mexica</option>
+						<option disabled>Europe</option>
+						<option>Germany</option>
+						<option>France</option>
+						<option>Italy</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-4 control-label" for="city">City</label>
+				<div class="col-sm-8">
+					<select id="city" class="form-control" name="city">
+						<option selected="selected" name="sity">NY</option>
+						<option>Denver</option>
+						<option>Boston</option>
+						<option>Washington</option>
+						<option>Seattle</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<label>Address 1 *</label>
+					<textarea class="address" id="add1"></textarea>
+					<span class="error addr1-error" id="add1-error"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<label>Address 2</label>
+					<textarea class="address" id="add2"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-4 control-label" for="zip">Zip-code *</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text" id="zip" name="zip">
+					<span class="error" id="zip-error"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-4 control-label" for="phone">Phone</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="phone" id="phone" name="phone">
+					<span class="error" id="phone-error"></span>
+				</div>
+			</div>
+			<div class="form-group btn-row">
+				<div class="col-sm-4">
+					<input class="btn" type="button" value="Back" id="second-part-back">
+				</div>
+				<div class="col-sm-4">
+					<input class="btn" type="reset" id="second-part-reset">
+				</div>
+				<div class="col-sm-4">
+					<input class="btn" type="submit" value="Next" id="second-part-submit">
+				</div>
+			</div>
+		</form>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 33%" aria-valuenow="2" aria-valuemin="2" aria-valuemax="6" id="second-part-progress">
+			</div>
+		</div>
+	</div>
+
+	<div class="part third" id="third-part">
+		<form novalidate="novalidate" class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-10 control-label" for="upload">Upload avatar</label>
+				<div class="col-sm-2">
+					<input type="file" class="upload" name="upload" id="upload">
+					<i class="glyphicon glyphicon-upload upload-icon"></i>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Interests</h3>
+				</div>
+				<div class="panel-body">
+					<ul id="interests">
+						<li>
+							<label><input type="checkbox"> Music</label>
+						</li>
+						<li>
+							<label><input type="checkbox"> Painting</label>
+						</li>
+						<li>
+							<label><input type="checkbox"> Sport</label>
+						</li>
+						<li>
+							<label><input type="checkbox"> Travel</label>
+						</li>
+						<li>
+							<label><input type="checkbox"> Friends</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-12">
+					<label>About yourself</label>
+					<span><span class="char-counter" id="char-counter">0</span>/500</span>
+					<textarea id="about"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-5 control-label" for="date">Date of birth</label>
+				<div class="col-sm-7">
+					<input class="form-control" type="date" name="date" id="date">
+					<span class="error" id="date-error"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<label><input class="" type="checkbox" id="conditions"> I agree to term and conditions *</label>
+					<span class="error" id="conditions-error"></span>
+				</div>
+			</div>
+			<div class="form-group btn-row">
+				<div class="col-sm-4">
+					<input class="btn" type="button" value="Back" id="third-part-back">
+				</div>
+				<div class="col-sm-4">
+					<input class="btn" type="reset" id="third-part-reset">
+				</div>
+				<div class="col-sm-4">
+					<input class="btn" type="submit" value="Send" id="third-part-submit">
+				</div>
+			</div>
+		</form>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5" id="third-part-progress">
+			</div>
+		</div>
+	</div>
+	<div id="finish-part" class="finish part row">
+		<div class="col-sm-6">
+			<input type="button" class="btn" value="Finish" id="finish"/>
+		</div>
+		<div class="col-sm-6">
+			<input type="button" class="btn" value="Restart" id="restart"/>
+		</div>
+	</div>
+	<div class="popup" id="popup">
+		<div class="panel panel-default">
+  			<div class="panel-heading">
+    			<h3 class="panel-title">Server error!</h3>
+ 			</div>
+  			<div class="panel-body">
+    			Unfortunately there was some server error. Please, try again.
+  			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="app/js/script.js"></script>
+</body>
+</html>
